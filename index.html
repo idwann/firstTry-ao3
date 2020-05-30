@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ao3</title>
+    <style>
+      body{
+        background-color: #f6f7f9;
+      }
+      .opener{
+        height: 500px;
+        width: 100vw;
+        background-color:#f6f7f9;
+        display: flex;
+        align-items: center;
+      }
+     #ao3Title{
+        position: absolute;
+        margin: 10px auto 0 auto;
+     }
+      .wrapAll{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .kudosVShits{
+        font-weight: bold;
+      }
+      .chart2Intro{
+        
+        width: 100vw;
+        background-color: #f6f7f9;
+      }
+      
+      .introduction{
+        font-size: 20px;
+        font-weight: 10;
+        width: 500px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+      }
+      .intro1{
+        text-align: center;
+      }
+      .intro2{
+        border-top: 0.5px solid black;
+        font-size: 16px;
+      }
+      .rating{
+        display: flex;
+        flex-direction: row;
+        padding: 100px 0 40px 0;
+        width: 100vw;
+        height: 50px;
+        justify-content: space-around;
+      }
+      #G #T #M #E #N{
+        position: absolute;
+        height: 60px;
+        margin: 60px 60px 0 60px;
+      }
+      .dropdown{
+        display: none;
+        width: 15vw;
+        text-align: center;
+      }
+      .dropWrap{
+        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        align-items: center;
+      }
+    </style>
+    
+    <!-- You can import css from local files like this. -->
+    <!-- <link rel="stylesheet"  type="text/css" href="style.css" /> -->
+    <!-- <script src="https://unpkg.com/d3@5.15.0/dist/d3.min.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.js"></script>
+    <script src="https://d3js.org/d3-scale.v3.min.js"></script>
+    <script src="https://unpkg.com/d3@5.12.0/dist/d3.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  </head>
+  <body>
+    <div class="wrapAll">
+      <div class="opener">
+        <img src='images/ao3TitleColored.svg' id='ao3Title'>
+      </div>
+      
+      <div class="introduction">
+        <div class="intro1">
+          <p id='intor1'>• AO3中文内容探究——以3000篇AO3中文文章为例 •</p>
+       </div>
+        <div class="intro2">
+          <p>  Archive of our own,简称“AO3”，创建于2008年，由Organization for Transformative Works运营，是一个非营利且开源的同人小说数据库网站，站内的文章由网站上的用户所贡献。</p>
+          <p>  “AO3”得名于其创建者、作家娜奥米·诺维克（Naomi Novik）撰写的博客文章，她呼吁创建一个“属于我们自己的档案”；因此“AO3”将自己定位为一个存档网站而不是网络社区，支持创作自由，并反对同人作品的营利倾向。</p>
+        </div>
+      </div>
+
+      <div class="rating">
+        <div id="dropGwarp" class="dropWrap"> 
+          <img src='images/G.svg' id='G'>
+          <div id="dropG" class="dropdown">
+            <p>普遍级：内容不会困扰到任何人，适合全年龄段。</p>
+          </div>
+        </div>
+        <div id="dropTwarp" class="dropWrap"> 
+          <img src='images/T.svg' id='T'>
+          <div id="dropT" class="dropdown">
+            <p>青少年以上：内容可能不适合13岁以下的读者。</p>
+          </div>
+        </div>
+        <div id="dropMwarp" class="dropWrap"> 
+          <img src='images/M.svg' id='M'>
+          <div id="dropM" class="dropdown">
+            <p>限制级：内容包含成人主题（性，暴力等）但没有成人级的内容露骨。</p>
+          </div>
+        </div>
+        <div id="dropEwarp" class="dropWrap"> 
+          <img src='images/E.svg' id='E'>
+          <div id="dropE" class="dropdown">
+            <p>成人级：内容包含露骨的成人主题，例如色情、直白的暴力描写等。</p>
+          </div>
+        </div>
+        <div id="dropNwarp" class="dropWrap"> 
+          <img src='images/N.svg' id='N'>
+          <div id="dropN" class="dropdown">
+            <p>无分级：这是默认选项。对于搜索、显示与其他AO3的功能来说，这个分级也许会被当作成人级与限制级相同的分级对待。如果您倾向于不给您的作品内容分级，请选择这个选项。</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="svgwrap">
+        <svg width='1500' height ='1700' id='svg1'>
+        </svg>
+      </div>
+      
+      <div class='chart2Intro'>
+        <img src='images/fenge.svg' id='fenge'>
+      </div>
+      <div class="svgwrap2">
+        <svg width='1600' height ='1100' id='svg2'>
+        </svg>
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
+ 
